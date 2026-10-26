@@ -1249,6 +1249,68 @@ section {
   70% { box-shadow: 0 0 0 8px rgba(34, 197, 94, 0); }
 }
 
+/* =====================================================================
+   Merci : robot IA souriant
+   ===================================================================== */
+#merci {
+  padding-top: 20px;
+}
+
+.merci {
+  text-align: center;
+}
+
+.merci h2 {
+  margin: 10px 0 8px;
+  font-size: clamp(26px, 4.5vw, 40px);
+}
+
+.merci p {
+  margin: 0 0 26px;
+  color: var(--texte-doux);
+}
+
+.robot {
+  width: 170px;
+  height: auto;
+  filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.45));
+  animation: oscille 4s ease-in-out infinite;
+}
+
+/* Le bras fait coucou en tournant autour de l'épaule */
+.robot-bras {
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+  animation: coucou 1.6s ease-in-out infinite;
+}
+
+@keyframes coucou {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(-25deg); }
+  75% { transform: rotate(15deg); }
+}
+
+/* Les yeux clignent de temps en temps */
+.robot-yeux {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: cligne 4s infinite;
+}
+
+@keyframes cligne {
+  0%, 92%, 100% { transform: scaleY(1); }
+  95% { transform: scaleY(0.1); }
+}
+
+/* L'antenne brille */
+.robot-antenne {
+  animation: brille 2s ease-in-out infinite;
+}
+
+@keyframes brille {
+  50% { fill: #a78bfa; }
+}
+
 footer {
   padding-block: 30px;
   text-align: center;

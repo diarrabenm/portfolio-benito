@@ -250,6 +250,49 @@
         </div>
       </div>
     </section>
+
+    <!-- ===== Merci : petit robot IA qui sourit et fait coucou ===== -->
+    <section id="merci">
+      <div class="conteneur merci apparition">
+        <svg class="robot" viewBox="0 0 200 220" role="img" aria-label="Robot IA qui sourit et fait coucou">
+          <defs>
+            <linearGradient id="robot-corps" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#8b5cf6"/>
+              <stop offset="1" stop-color="#6366f1"/>
+            </linearGradient>
+          </defs>
+          <!-- Antenne qui brille -->
+          <line x1="100" y1="42" x2="100" y2="22" stroke="#a78bfa" stroke-width="4" stroke-linecap="round"/>
+          <circle class="robot-antenne" cx="100" cy="16" r="8" fill="#22d3ee"/>
+          <!-- Bras droit qui fait coucou -->
+          <g class="robot-bras">
+            <rect x="150" y="118" width="14" height="44" rx="7" fill="url(#robot-corps)"/>
+            <circle cx="157" cy="112" r="11" fill="#a78bfa"/>
+          </g>
+          <!-- Bras gauche -->
+          <rect x="34" y="140" width="14" height="44" rx="7" fill="url(#robot-corps)" transform="rotate(18 41 140)"/>
+          <!-- Corps avec un cœur -->
+          <rect x="52" y="128" width="96" height="70" rx="22" fill="url(#robot-corps)"/>
+          <path d="M100 178c-10-7-16-12-16-19a8 8 0 0 1 16-3 8 8 0 0 1 16 3c0 7-6 12-16 19z" fill="#f472b6"/>
+          <!-- Tête -->
+          <rect x="40" y="40" width="120" height="96" rx="32" fill="url(#robot-corps)"/>
+          <rect x="54" y="54" width="92" height="68" rx="22" fill="#0b0a1c"/>
+          <!-- Yeux qui clignent -->
+          <g class="robot-yeux" fill="#22d3ee">
+            <ellipse cx="80" cy="82" rx="8" ry="10"/>
+            <ellipse cx="120" cy="82" rx="8" ry="10"/>
+          </g>
+          <!-- Joues + grand sourire -->
+          <circle cx="68" cy="100" r="5" fill="#f472b6" opacity=".7"/>
+          <circle cx="132" cy="100" r="5" fill="#f472b6" opacity=".7"/>
+          <path d="M80 100q20 18 40 0" fill="none" stroke="#22d3ee" stroke-width="5" stroke-linecap="round"/>
+        </svg>
+
+        <h2>Merci pour la visite ! <span aria-hidden="true">😊</span></h2>
+        <p>J'espère avoir de vos nouvelles très bientôt.</p>
+        <a class="bouton bouton-plein" href="#contact"><span data-i="mail"></span> Me contacter</a>
+      </div>
+    </section>
   </main>
 
   <footer><div class="conteneur">© <span id="annee"></span> Ben Moriba Diarra · Benito · Portfolio de développeur full stack</div></footer>
