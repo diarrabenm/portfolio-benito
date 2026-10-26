@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ben Moriba Diarra — Développeur full stack</title>
+  <meta name="description" content="Portfolio de Ben Moriba Diarra, étudiant développeur full stack à HETIC : React, TypeScript, Python, FastAPI, Docker.">
+
+  <!-- Police Google : Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fond animé : grille + halos flous de couleur -->
+  <div class="fond-anime" aria-hidden="true">
+    <div class="grille"></div>
+    <div class="halo halo-1"></div>
+    <div class="halo halo-2"></div>
+    <div class="halo halo-3"></div>
+  </div>
+
+  <!-- ===== Écran d'accueil (disparaît tout seul après 3 secondes) ===== -->
+  <div id="bienvenue" aria-hidden="true">
+    <div class="bienvenue-contenu">
+      <div class="bienvenue-icones"><span data-i="code"></span><span data-i="user"></span><span data-i="github"></span></div>
+      <p class="bienvenue-titre">
+        <span class="mot" style="animation-delay:.4s">Bienvenue</span>
+        <span class="mot" style="animation-delay:.55s">sur</span>
+        <span class="mot" style="animation-delay:.7s">mon</span><br>
+        <span class="mot degrade" style="animation-delay:.95s">Portfolio</span>
+      </p>
+      <div class="bienvenue-url"><span data-i="globe"></span> diarrabenm.github.io</div>
+    </div>
+  </div>
+
+  <!-- ===== Menu ===== -->
+  <nav class="menu">
+    <div class="conteneur">
+      <a href="#accueil" class="logo degrade">Ben Diarra</a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span data-i="menu"></span></button>
+      <div class="liens" id="liens">
+        <a href="#accueil" class="actif">Accueil</a>
+        <a href="#apropos">À propos</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#cv">CV</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ===== Accueil ===== -->
+    <section id="accueil">
+      <div class="conteneur accueil">
+        <div class="apparition">
+          <span class="badge"><span data-i="sparkles"></span> Recherche une alternance</span>
+          <h1>Développeur<br><span class="degrade">Full Stack</span></h1>
+          <div class="machine-a-ecrire" id="machine-a-ecrire"></div>
+          <p class="intro">
+            Je crée des applications web complètes, utiles et agréables à utiliser,
+            de la base de données jusqu'à l'interface.
+          </p>
+          <div class="pastilles">
+            <span>React</span><span>TypeScript</span><span>Python</span><span>FastAPI</span><span>Docker</span>
+          </div>
+          <div class="boutons">
+            <a class="bouton" href="#portfolio">Projets <span data-i="ext"></span></a>
+            <a class="bouton" href="#contact">Contact <span data-i="mail"></span></a>
+            <a class="bouton bouton-plein" href="assets/cv/CV-Ben-Moriba-Diarra.pdf" download>Mon CV <span data-i="download"></span></a>
+          </div>
+          <div class="reseaux">
+            <a href="https://github.com/diarrabenm" target="_blank" rel="noopener" aria-label="GitHub"><span data-i="github"></span></a>
+            <a href="mailto:diarrabenm@gmail.com" aria-label="E-mail"><span data-i="mail"></span></a>
+          </div>
+        </div>
+
+        <!-- Photo détourée avec un halo derrière -->
+        <div class="accueil-photo apparition">
+          <img src="assets/images/photo-pied.webp" alt="Photo de Ben Moriba Diarra en costume" width="417" height="1400">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== À propos ===== -->
+    <section id="apropos">
+      <div class="conteneur">
+        <div class="titre-section apparition">
+          <h2 class="degrade">À propos</h2>
+          <p><span data-i="sparkles"></span> Transformer des idées en applications concrètes <span data-i="sparkles"></span></p>
+        </div>
+
+        <div class="apropos">
+          <div class="apparition">
+            <h3><span class="degrade">Bonjour, je suis</span><span>Ben Moriba Diarra</span></h3>
+            <p>
+              Étudiant en Bachelor à HETIC, après un bac scientifique et une formation informatique
+              en Côte d'Ivoire. J'aime mener un projet de bout en bout : concevoir la base de données,
+              écrire l'API, tester, conteneuriser avec Docker, puis soigner l'interface.
+              Je recherche une alternance pour continuer à apprendre sur des projets concrets.
+            </p>
+            <div class="boutons">
+              <a class="bouton bouton-plein" href="mailto:diarrabenm@gmail.com"><span data-i="mail"></span> Me contacter</a>
+              <a class="bouton bouton-leger" href="#portfolio"><span data-i="code"></span> Voir les projets</a>
+            </div>
+          </div>
+          <div class="apparition">
+            <div class="photo-ronde">
+              <img src="assets/images/photo-buste.webp" alt="" width="857" height="1224">
+            </div>
+          </div>
+        </div>
+
+        <!-- Les chiffres comptent de 0 jusqu'à leur valeur (script.js) -->
+        <div class="chiffres">
+          <div class="chiffre apparition">
+            <div class="haut"><span class="icone" data-i="code"></span><span class="nombre" id="nb-projets">0</span></div>
+            <h4>Projets</h4><small>Perso, école et en équipe <span data-i="arrowur"></span></small>
+          </div>
+          <div class="chiffre apparition">
+            <div class="haut"><span class="icone" data-i="users"></span><span class="nombre" id="nb-equipe">0</span></div>
+            <h4>Projets en équipe</h4><small>Git, Scrum, Pull Requests <span data-i="arrowur"></span></small>
+          </div>
+          <div class="chiffre apparition">
+            <div class="haut"><span class="icone" data-i="globe"></span><span class="nombre" data-compte="4">0</span></div>
+            <h4>Années de formation</h4><small>En informatique depuis 2022 <span data-i="arrowur"></span></small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Portfolio : onglets Projets / Parcours / Technologies ===== -->
+    <section id="portfolio">
+      <div class="conteneur">
+        <div class="titre-section apparition">
+          <h2 class="degrade">Portfolio</h2>
+          <p>Mes projets, mon parcours et les technologies que j'utilise.</p>
+        </div>
+        <div class="onglets apparition" role="tablist">
+          <button class="onglet actif" data-onglet="projets" role="tab"><span data-i="code"></span>Projets</button>
+          <button class="onglet" data-onglet="parcours" role="tab"><span data-i="award"></span>Parcours</button>
+          <button class="onglet" data-onglet="technos" role="tab"><span data-i="layers"></span>Technologies</button>
+        </div>
+        <div id="panneau"></div>
+      </div>
+    </section>
+
+    <!-- ===== CV ===== -->
+    <section id="cv">
+      <div class="conteneur">
+        <div class="titre-section apparition">
+          <h2 class="degrade">Mon CV</h2>
+          <p>Tout mon parcours sur une page, à télécharger en PDF.</p>
+        </div>
+        <div class="cv apparition">
+          <!-- Aperçu de la première page : un clic l'ouvre en grand -->
+          <a class="cv-apercu" href="assets/cv/CV-Ben-Moriba-Diarra.pdf" target="_blank" rel="noopener" aria-label="Ouvrir le CV en PDF">
+            <img src="assets/cv/apercu-cv.jpg" alt="Aperçu du CV de Ben Moriba Diarra" width="954" height="1349" loading="lazy">
+          </a>
+          <div class="cv-texte">
+            <h3>Développeur Full Stack <span class="degrade">— recherche d'alternance</span></h3>
+            <ul>
+              <li><span data-i="school"></span> Bachelor Développement Web — HETIC (2024 – 2027)</li>
+              <li><span data-i="code"></span> React, TypeScript, Node.js, Python / FastAPI, API REST</li>
+              <li><span data-i="layers"></span> PostgreSQL, Docker, Git, tests automatisés, Figma</li>
+              <li><span data-i="sparkles"></span> 5 projets détaillés : Pronostics foot, DÉTOUR, CinéConnect, SubTrack, MATRiCE</li>
+            </ul>
+            <div class="boutons">
+              <!-- L'attribut « download » force le téléchargement du fichier -->
+              <a class="bouton bouton-plein" href="assets/cv/CV-Ben-Moriba-Diarra.pdf" download="CV-Ben-Moriba-Diarra.pdf">
+                <span data-i="download"></span> Télécharger mon CV (PDF)
+              </a>
+              <a class="bouton bouton-leger" href="assets/cv/CV-Ben-Moriba-Diarra.pdf" target="_blank" rel="noopener">
+                <span data-i="ext"></span> Voir en ligne
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <div class="conteneur">
+        <div class="titre-section apparition">
+          <h2 class="degrade">Contact</h2>
+          <p>Une question, une offre d'alternance ? Écris-moi, je réponds rapidement.</p>
+        </div>
+        <div class="contact">
+          <div class="boite apparition">
+            <h3><span class="degrade">Écris-moi</span><span data-i="share"></span></h3>
+            <p class="sous-titre">Le message s'ouvre dans ta messagerie, prêt à être envoyé.</p>
+            <form id="formulaire">
+              <div class="champ"><span data-i="user"></span><input id="f-nom" placeholder="Ton nom" required></div>
+              <div class="champ"><span data-i="mail"></span><input id="f-sujet" placeholder="Sujet" required></div>
+              <div class="champ"><span data-i="msg"></span><textarea id="f-message" placeholder="Ton message" required></textarea></div>
+              <button class="envoyer" type="submit"><span data-i="send"></span> Envoyer le message</button>
+            </form>
+          </div>
+
+          <div class="boite apparition">
+            <h3 class="petit-titre"><span data-i="share"></span> Me retrouver</h3>
+            <a class="lien-reseau" href="mailto:diarrabenm@gmail.com">
+              <span class="icone" style="background:#7c3aed" data-i="mail"></span>
+              <span><b>E-mail</b><small>diarrabenm@gmail.com</small></span>
+            </a>
+            <a class="lien-reseau" href="https://github.com/diarrabenm" target="_blank" rel="noopener">
+              <span class="icone" style="background:#24292f" data-i="github"></span>
+              <span><b>GitHub</b><small>@diarrabenm</small></span>
+            </a>
+            <div class="dispo">
+              <span class="point"></span>
+              <span><b>Disponible pour une alternance</b><small>Développement web full stack — région parisienne</small></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="conteneur">© <span id="annee"></span> Ben Moriba Diarra</div></footer>
+
+  <!-- Page de détail d'un projet (remplie par script.js) -->
+  <div id="detail" role="dialog" aria-modal="true" aria-label="Détail du projet">
+    <div class="conteneur" id="detail-contenu"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
