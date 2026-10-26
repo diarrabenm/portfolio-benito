@@ -29,4 +29,4 @@ Tout se passe en haut de `script.js` :
 
 1. Pousser le dossier sur un dépôt GitHub public.
 2. Sur GitHub : **Settings → Pages → Branch : main / (root) → Save**.
-3. Le site est en ligne à l'adresse `https://diarrabenm.github.io/<nom-du-depot>/`.
+3. Le site est en ligne : https://diarrabenm.github.io/portfolio-benito/
