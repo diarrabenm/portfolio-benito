@@ -1271,7 +1271,8 @@ section {
 }
 
 .robot {
-  width: 170px;
+  overflow: visible; /* la main peut dépasser un peu en faisant coucou */
+  width: 100px;
   height: auto;
   filter: drop-shadow(0 0 30px rgba(139, 92, 246, 0.45));
   animation: oscille 4s ease-in-out infinite;
@@ -1280,14 +1281,17 @@ section {
 /* Le bras fait coucou en tournant autour de l'épaule */
 .robot-bras {
   transform-box: fill-box;
-  transform-origin: 50% 100%;
-  animation: coucou 1.6s ease-in-out infinite;
+  transform-origin: 50% 100%; /* tourne autour de l'épaule */
+  animation: coucou 1.2s ease-in-out infinite;
 }
 
+/* Coucou : 2 allers-retours rapides de la main, puis une petite pause */
 @keyframes coucou {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(-25deg); }
-  75% { transform: rotate(15deg); }
+  0%, 70%, 100% { transform: rotate(0deg); }
+  10% { transform: rotate(-5deg); }
+  25% { transform: rotate(25deg); }
+  40% { transform: rotate(-5deg); }
+  55% { transform: rotate(25deg); }
 }
 
 /* Les yeux clignent de temps en temps */
